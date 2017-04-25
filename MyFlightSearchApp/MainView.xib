@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A2323a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MyFlightSearchApp" customModuleProvider="target">
+            <connections>
+                <outlet property="searchButton" destination="CS9-DI-1cc" id="6eT-tf-ocM"/>
+                <outlet property="searchView" destination="4gh-k6-Kkb" id="50p-68-Ybc"/>
+                <outlet property="view" destination="iN0-l3-epB" id="3xg-Hw-GRG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxI-Wj-SbG">
+                    <rect key="frame" x="16" y="80" width="343" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vol de départ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vA-rN-LvR">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IV-b8-ubf">
+                            <rect key="frame" x="0.0" y="29" width="343" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7A-Qh-2Ry">
+                            <rect key="frame" x="-4" y="29" width="351" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="searchDepartureAirport:" destination="-1" eventType="touchUpInside" id="kML-Q1-yTf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="U4z-oi-6ST"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-yD-sHa" userLabel="Separator">
+                    <rect key="frame" x="16" y="144" width="343" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="kLU-rs-zvw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gh-k6-Kkb">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS9-DI-1cc">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <state key="normal" title="Recherche"/>
+                            <connections>
+                                <action selector="searchTrips:" destination="-1" eventType="touchUpInside" id="Qwg-JB-Gdf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="CS9-DI-1cc" firstAttribute="top" secondItem="4gh-k6-Kkb" secondAttribute="top" id="E2K-Gr-VKZ"/>
+                        <constraint firstItem="CS9-DI-1cc" firstAttribute="leading" secondItem="4gh-k6-Kkb" secondAttribute="leading" id="KUA-jq-L7k"/>
+                        <constraint firstAttribute="bottom" secondItem="CS9-DI-1cc" secondAttribute="bottom" id="Wsz-Vq-1KK"/>
+                        <constraint firstAttribute="trailing" secondItem="CS9-DI-1cc" secondAttribute="trailing" id="XkW-nu-WO3"/>
+                        <constraint firstAttribute="height" constant="60" id="c5L-Uz-Q0e"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MxI-Wj-SbG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="2ZV-gH-jg2"/>
+                <constraint firstAttribute="bottom" secondItem="4gh-k6-Kkb" secondAttribute="bottom" id="BNs-GV-Mer"/>
+                <constraint firstAttribute="trailing" secondItem="4gh-k6-Kkb" secondAttribute="trailing" id="CBa-BX-SEw"/>
+                <constraint firstAttribute="trailing" secondItem="MxI-Wj-SbG" secondAttribute="trailing" constant="16" id="M55-0H-c5Y"/>
+                <constraint firstItem="BWo-yD-sHa" firstAttribute="top" secondItem="MxI-Wj-SbG" secondAttribute="bottom" id="Q0w-Wk-L1H"/>
+                <constraint firstItem="BWo-yD-sHa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="SvM-c0-fbf"/>
+                <constraint firstItem="4gh-k6-Kkb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Wsc-cs-Off"/>
+                <constraint firstAttribute="trailing" secondItem="BWo-yD-sHa" secondAttribute="trailing" constant="16" id="ZGv-Fr-s7L"/>
+                <constraint firstItem="MxI-Wj-SbG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="tKb-Ie-CuS"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="132.5"/>
+        </view>
+    </objects>
+</document>

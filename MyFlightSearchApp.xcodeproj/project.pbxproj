@@ -7,21 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00C495EB8E0B42B7AD3988E /* Pods_MyFlightSearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6580ED964328D0C76C733DC /* Pods_MyFlightSearchApp.framework */; };
+		D900B2271EADDEB500C1A077 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900B2261EADDEB500C1A077 /* Util.swift */; };
+		D900B22A1EAE400700C1A077 /* AirportSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900B2291EAE400700C1A077 /* AirportSearchViewController.swift */; };
+		D900B22C1EAE402500C1A077 /* AirportSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900B22B1EAE402500C1A077 /* AirportSearchViewModel.swift */; };
+		D900B22E1EAE403C00C1A077 /* AirportSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D900B22D1EAE403C00C1A077 /* AirportSearchView.xib */; };
+		D9050F7E1EAF395400D8E9AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9050F7D1EAF395400D8E9AD /* Constants.swift */; };
+		D90CD7281EAD0E8100AB2CF9 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CD7271EAD0E8100AB2CF9 /* Airport.swift */; };
+		D90CD72A1EAD0F4500AB2CF9 /* AirportParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CD7291EAD0F4500AB2CF9 /* AirportParser.swift */; };
 		D914E6B11EA6A2F2005C4541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6B01EA6A2F2005C4541 /* AppDelegate.swift */; };
-		D914E6B31EA6A2F2005C4541 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6B21EA6A2F2005C4541 /* ViewController.swift */; };
-		D914E6B61EA6A2F2005C4541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D914E6B41EA6A2F2005C4541 /* Main.storyboard */; };
 		D914E6B81EA6A2F2005C4541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D914E6B71EA6A2F2005C4541 /* Assets.xcassets */; };
 		D914E6BB1EA6A2F2005C4541 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D914E6B91EA6A2F2005C4541 /* LaunchScreen.storyboard */; };
+		D914E6CA1EA6A432005C4541 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6C91EA6A432005C4541 /* MainViewController.swift */; };
+		D914E6CC1EA6A440005C4541 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D914E6CB1EA6A440005C4541 /* MainView.xib */; };
+		D914E6CE1EA6A459005C4541 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6CD1EA6A459005C4541 /* MainViewModel.swift */; };
+		D914E6D11EA6A4DB005C4541 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6D01EA6A4DB005C4541 /* Trip.swift */; };
+		D914E6D31EA6A507005C4541 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6D21EA6A507005C4541 /* Parser.swift */; };
+		D914E6D51EA6A516005C4541 /* TripParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6D41EA6A516005C4541 /* TripParser.swift */; };
+		D914E6D71EA6A6CC005C4541 /* FlightSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6D61EA6A6CC005C4541 /* FlightSearchViewModel.swift */; };
+		D914E6D91EA6A6E0005C4541 /* FlightSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6D81EA6A6E0005C4541 /* FlightSearchViewController.swift */; };
+		D914E6DB1EA6A6FD005C4541 /* FlightSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D914E6DA1EA6A6FD005C4541 /* FlightSearchView.xib */; };
+		D914E6DE1EA6A784005C4541 /* FlightSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6DD1EA6A784005C4541 /* FlightSearchCell.swift */; };
+		D914E6E01EA6A78F005C4541 /* FlightSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D914E6DF1EA6A78F005C4541 /* FlightSearchCell.xib */; };
+		D917E1E21EA8D906002E345A /* Airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = D917E1DF1EA8D906002E345A /* Airplane.png */; };
+		D917E1E31EA8D906002E345A /* Airplane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D917E1E01EA8D906002E345A /* Airplane@2x.png */; };
+		D917E1E41EA8D906002E345A /* Airplane@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D917E1E11EA8D906002E345A /* Airplane@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EB42EEDB8FC06FCFB1FD387 /* Pods-MyFlightSearchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFlightSearchApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFlightSearchApp/Pods-MyFlightSearchApp.release.xcconfig"; sourceTree = "<group>"; };
+		38767B5668724C03B938B8FF /* Pods-MyFlightSearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFlightSearchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFlightSearchApp/Pods-MyFlightSearchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D900B2261EADDEB500C1A077 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		D900B2291EAE400700C1A077 /* AirportSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchViewController.swift; sourceTree = "<group>"; };
+		D900B22B1EAE402500C1A077 /* AirportSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchViewModel.swift; sourceTree = "<group>"; };
+		D900B22D1EAE403C00C1A077 /* AirportSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirportSearchView.xib; sourceTree = "<group>"; };
+		D9050F7D1EAF395400D8E9AD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D90CD7271EAD0E8100AB2CF9 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		D90CD7291EAD0F4500AB2CF9 /* AirportParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportParser.swift; sourceTree = "<group>"; };
 		D914E6AD1EA6A2F2005C4541 /* MyFlightSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFlightSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D914E6B01EA6A2F2005C4541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D914E6B21EA6A2F2005C4541 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D914E6B51EA6A2F2005C4541 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D914E6B71EA6A2F2005C4541 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D914E6BA1EA6A2F2005C4541 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D914E6BC1EA6A2F2005C4541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D914E6C91EA6A432005C4541 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D914E6CB1EA6A440005C4541 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		D914E6CD1EA6A459005C4541 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D914E6D01EA6A4DB005C4541 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		D914E6D21EA6A507005C4541 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		D914E6D41EA6A516005C4541 /* TripParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripParser.swift; sourceTree = "<group>"; };
+		D914E6D61EA6A6CC005C4541 /* FlightSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightSearchViewModel.swift; sourceTree = "<group>"; };
+		D914E6D81EA6A6E0005C4541 /* FlightSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightSearchViewController.swift; sourceTree = "<group>"; };
+		D914E6DA1EA6A6FD005C4541 /* FlightSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightSearchView.xib; sourceTree = "<group>"; };
+		D914E6DD1EA6A784005C4541 /* FlightSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightSearchCell.swift; sourceTree = "<group>"; };
+		D914E6DF1EA6A78F005C4541 /* FlightSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightSearchCell.xib; sourceTree = "<group>"; };
+		D917E1DF1EA8D906002E345A /* Airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airplane.png; sourceTree = "<group>"; };
+		D917E1E01EA8D906002E345A /* Airplane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airplane@2x.png"; sourceTree = "<group>"; };
+		D917E1E11EA8D906002E345A /* Airplane@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airplane@3x.png"; sourceTree = "<group>"; };
+		F6580ED964328D0C76C733DC /* Pods_MyFlightSearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFlightSearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +71,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00C495EB8E0B42B7AD3988E /* Pods_MyFlightSearchApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FCF63169D4A9792C5794293 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38767B5668724C03B938B8FF /* Pods-MyFlightSearchApp.debug.xcconfig */,
+				2EB42EEDB8FC06FCFB1FD387 /* Pods-MyFlightSearchApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D900B2251EADDE9F00C1A077 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D900B2261EADDEB500C1A077 /* Util.swift */,
+				D9050F7D1EAF395400D8E9AD /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		D900B2281EAE3FB300C1A077 /* AirportSearch */ = {
+			isa = PBXGroup;
+			children = (
+				D900B2291EAE400700C1A077 /* AirportSearchViewController.swift */,
+				D900B22B1EAE402500C1A077 /* AirportSearchViewModel.swift */,
+				D900B22D1EAE403C00C1A077 /* AirportSearchView.xib */,
+			);
+			name = AirportSearch;
+			sourceTree = "<group>";
+		};
 		D914E6A41EA6A2F2005C4541 = {
 			isa = PBXGroup;
 			children = (
 				D914E6AF1EA6A2F2005C4541 /* MyFlightSearchApp */,
 				D914E6AE1EA6A2F2005C4541 /* Products */,
+				7FCF63169D4A9792C5794293 /* Pods */,
+				F127408DC0AC317D8CF9D521 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +127,126 @@
 		D914E6AF1EA6A2F2005C4541 /* MyFlightSearchApp */ = {
 			isa = PBXGroup;
 			children = (
+				D917E1DC1EA8D78C002E345A /* Ressources */,
+				D914E6C31EA6A3DF005C4541 /* Common */,
+				D914E6C21EA6A3D9005C4541 /* Classes */,
 				D914E6B01EA6A2F2005C4541 /* AppDelegate.swift */,
-				D914E6B21EA6A2F2005C4541 /* ViewController.swift */,
-				D914E6B41EA6A2F2005C4541 /* Main.storyboard */,
 				D914E6B71EA6A2F2005C4541 /* Assets.xcassets */,
 				D914E6B91EA6A2F2005C4541 /* LaunchScreen.storyboard */,
 				D914E6BC1EA6A2F2005C4541 /* Info.plist */,
 			);
 			path = MyFlightSearchApp;
+			sourceTree = "<group>";
+		};
+		D914E6C21EA6A3D9005C4541 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D900B2281EAE3FB300C1A077 /* AirportSearch */,
+				D914E6C81EA6A410005C4541 /* Main */,
+				D914E6C71EA6A406005C4541 /* FlightSearch */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D914E6C31EA6A3DF005C4541 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D914E6C41EA6A3E7005C4541 /* Remote */,
+				D900B2251EADDE9F00C1A077 /* Utils */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		D914E6C41EA6A3E7005C4541 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				D914E6C61EA6A400005C4541 /* Model */,
+				D914E6C51EA6A3FA005C4541 /* Parser */,
+			);
+			name = Remote;
+			sourceTree = "<group>";
+		};
+		D914E6C51EA6A3FA005C4541 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				D914E6D41EA6A516005C4541 /* TripParser.swift */,
+				D90CD7291EAD0F4500AB2CF9 /* AirportParser.swift */,
+				D914E6D21EA6A507005C4541 /* Parser.swift */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		D914E6C61EA6A400005C4541 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D914E6D01EA6A4DB005C4541 /* Trip.swift */,
+				D90CD7271EAD0E8100AB2CF9 /* Airport.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D914E6C71EA6A406005C4541 /* FlightSearch */ = {
+			isa = PBXGroup;
+			children = (
+				D914E6DC1EA6A75C005C4541 /* Cell */,
+				D914E6D81EA6A6E0005C4541 /* FlightSearchViewController.swift */,
+				D914E6D61EA6A6CC005C4541 /* FlightSearchViewModel.swift */,
+				D914E6DA1EA6A6FD005C4541 /* FlightSearchView.xib */,
+			);
+			name = FlightSearch;
+			sourceTree = "<group>";
+		};
+		D914E6C81EA6A410005C4541 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D914E6C91EA6A432005C4541 /* MainViewController.swift */,
+				D914E6CD1EA6A459005C4541 /* MainViewModel.swift */,
+				D914E6CB1EA6A440005C4541 /* MainView.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		D914E6DC1EA6A75C005C4541 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D914E6DD1EA6A784005C4541 /* FlightSearchCell.swift */,
+				D914E6DF1EA6A78F005C4541 /* FlightSearchCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		D917E1DC1EA8D78C002E345A /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				D917E1DD1EA8D7AE002E345A /* Images */,
+			);
+			name = Ressources;
+			sourceTree = "<group>";
+		};
+		D917E1DD1EA8D7AE002E345A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D917E1DE1EA8D7B5002E345A /* Icons */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		D917E1DE1EA8D7B5002E345A /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D917E1DF1EA8D906002E345A /* Airplane.png */,
+				D917E1E01EA8D906002E345A /* Airplane@2x.png */,
+				D917E1E11EA8D906002E345A /* Airplane@3x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		F127408DC0AC317D8CF9D521 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6580ED964328D0C76C733DC /* Pods_MyFlightSearchApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D914E6BF1EA6A2F2005C4541 /* Build configuration list for PBXNativeTarget "MyFlightSearchApp" */;
 			buildPhases = (
+				C03DAEFB592E3FE929FFE4AC /* [CP] Check Pods Manifest.lock */,
 				D914E6A91EA6A2F2005C4541 /* Sources */,
 				D914E6AA1EA6A2F2005C4541 /* Frameworks */,
 				D914E6AB1EA6A2F2005C4541 /* Resources */,
+				2E5F787FBB2613928C93BD02 /* [CP] Embed Pods Frameworks */,
+				E6ED0E309CD6D01F3DD0138F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,35 +312,94 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D914E6DB1EA6A6FD005C4541 /* FlightSearchView.xib in Resources */,
+				D917E1E41EA8D906002E345A /* Airplane@3x.png in Resources */,
+				D917E1E31EA8D906002E345A /* Airplane@2x.png in Resources */,
+				D914E6CC1EA6A440005C4541 /* MainView.xib in Resources */,
 				D914E6BB1EA6A2F2005C4541 /* LaunchScreen.storyboard in Resources */,
+				D914E6E01EA6A78F005C4541 /* FlightSearchCell.xib in Resources */,
 				D914E6B81EA6A2F2005C4541 /* Assets.xcassets in Resources */,
-				D914E6B61EA6A2F2005C4541 /* Main.storyboard in Resources */,
+				D900B22E1EAE403C00C1A077 /* AirportSearchView.xib in Resources */,
+				D917E1E21EA8D906002E345A /* Airplane.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E5F787FBB2613928C93BD02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFlightSearchApp/Pods-MyFlightSearchApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C03DAEFB592E3FE929FFE4AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6ED0E309CD6D01F3DD0138F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFlightSearchApp/Pods-MyFlightSearchApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D914E6A91EA6A2F2005C4541 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D914E6B31EA6A2F2005C4541 /* ViewController.swift in Sources */,
+				D900B22C1EAE402500C1A077 /* AirportSearchViewModel.swift in Sources */,
+				D914E6DE1EA6A784005C4541 /* FlightSearchCell.swift in Sources */,
+				D914E6D11EA6A4DB005C4541 /* Trip.swift in Sources */,
+				D914E6D51EA6A516005C4541 /* TripParser.swift in Sources */,
+				D914E6D71EA6A6CC005C4541 /* FlightSearchViewModel.swift in Sources */,
+				D9050F7E1EAF395400D8E9AD /* Constants.swift in Sources */,
 				D914E6B11EA6A2F2005C4541 /* AppDelegate.swift in Sources */,
+				D90CD72A1EAD0F4500AB2CF9 /* AirportParser.swift in Sources */,
+				D90CD7281EAD0E8100AB2CF9 /* Airport.swift in Sources */,
+				D900B2271EADDEB500C1A077 /* Util.swift in Sources */,
+				D914E6D91EA6A6E0005C4541 /* FlightSearchViewController.swift in Sources */,
+				D914E6D31EA6A507005C4541 /* Parser.swift in Sources */,
+				D914E6CA1EA6A432005C4541 /* MainViewController.swift in Sources */,
+				D914E6CE1EA6A459005C4541 /* MainViewModel.swift in Sources */,
+				D900B22A1EAE400700C1A077 /* AirportSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D914E6B41EA6A2F2005C4541 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D914E6B51EA6A2F2005C4541 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D914E6B91EA6A2F2005C4541 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,7 +508,9 @@
 		};
 		D914E6C01EA6A2F2005C4541 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38767B5668724C03B938B8FF /* Pods-MyFlightSearchApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4D644G77ZS;
 				INFOPLIST_FILE = MyFlightSearchApp/Info.plist;
@@ -274,7 +523,9 @@
 		};
 		D914E6C11EA6A2F2005C4541 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EB42EEDB8FC06FCFB1FD387 /* Pods-MyFlightSearchApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4D644G77ZS;
 				INFOPLIST_FILE = MyFlightSearchApp/Info.plist;
@@ -304,6 +555,7 @@
 				D914E6C11EA6A2F2005C4541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
