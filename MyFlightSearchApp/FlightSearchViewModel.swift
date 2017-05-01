@@ -72,17 +72,20 @@ class FlightSearchViewModel: NSObject {
             let imageName = "Airplane.png"
             let image = UIImage(named: imageName)
             cell.airplaneImageView.image = image
-            cell.salePriceLabel.text = tripArray[indexPath.row].salePrice
+            cell.salePriceLabel.text = Conversion.eurCurrency(price: tripArray[indexPath.row].salePrice) 
                 
             cell.departureAirportCodeLabel.text = tripArray[indexPath.row].segments.first?.origin
             cell.arrivalAirportCodeLabel.text = tripArray[indexPath.row].segments.first?.destination
             cell.departureAirportLabel.text = airportArray.filter(){$0.code == tripArray[indexPath.row].segments.first?.origin}.first?.name
             cell.arrivalAirportLabel.text = airportArray.filter(){$0.code == tripArray[indexPath.row].segments.first?.destination}.first?.name
-            
+
             let departureTimeStr = tripArray[indexPath.row].segments.first?.departureTime
             let arrivalTimeStr = tripArray[indexPath.row].segments.first?.arrivalTime
             cell.departureHourLabel.text = DateHourUtil.hourToString(date: departureTimeStr!)
             cell.arrivalHourLabel.text = DateHourUtil.hourToString(date: arrivalTimeStr!)
+            
+            cell.tripView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
+            cell.salePriceView.backgroundColor = UIColor(red: 78/255.0, green: 205/255.0, blue: 196/255.0, alpha: 1.0)
 
         }
         return cell

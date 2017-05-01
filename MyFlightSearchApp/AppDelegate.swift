@@ -22,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigationCtrl
         self.window?.makeKeyAndVisible()
-        
+
+        //UINavigationBar.appearance().barTintColor = UIColor.lightGray
+        //UIApplication.shared.statusBarStyle = .lightContent
         return true
     }
 

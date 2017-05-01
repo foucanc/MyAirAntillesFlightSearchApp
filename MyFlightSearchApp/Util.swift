@@ -18,3 +18,11 @@ class DateHourUtil {
         return str
     }
 }
+
+class Conversion {
+    
+    static func eurCurrency(price: String) -> String {
+        let str = price.replacingOccurrences(of: "EUR", with: "") + " €"
+        return str
+    }
+}

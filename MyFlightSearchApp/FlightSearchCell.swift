@@ -18,7 +18,10 @@ class FlightSearchCell: UITableViewCell {
     @IBOutlet weak var salePriceLabel: UILabel!
     @IBOutlet weak var departureHourLabel: UILabel!
     @IBOutlet weak var arrivalHourLabel: UILabel!
-    @IBOutlet weak var cellView: UIView!
+    
+    @IBOutlet weak var tripView: UIView!
+    @IBOutlet weak var salePriceView: UIView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

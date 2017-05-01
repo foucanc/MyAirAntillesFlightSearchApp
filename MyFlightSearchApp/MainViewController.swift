@@ -26,8 +26,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.searchView.backgroundColor = UIColor(red: 3/255.0, green: 201/255.0, blue: 209/255.0, alpha: 1.0)
-        self.searchButton.tintColor = UIColor.black
+        self.searchView.backgroundColor = UIColor(red: 78/255.0, green: 205/255.0, blue: 196/255.0, alpha: 1.0)
+        self.searchButton.tintColor = UIColor.white
         
     }
 

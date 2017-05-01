@@ -24,14 +24,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxI-Wj-SbG">
                     <rect key="frame" x="16" y="80" width="343" height="64"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vol de départ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vA-rN-LvR">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vol de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vA-rN-LvR">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IV-b8-ubf">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aéroport de départ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IV-b8-ubf">
                             <rect key="frame" x="0.0" y="29" width="343" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -46,17 +46,61 @@
                                 <action selector="searchDepartureAirport:" destination="-1" eventType="touchUpInside" id="kML-Q1-yTf"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-yD-sHa" userLabel="Separator">
+                            <rect key="frame" x="0.0" y="63" width="343" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="kLU-rs-zvw"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="BWo-yD-sHa" secondAttribute="trailing" id="53g-yh-LNO"/>
                         <constraint firstAttribute="height" constant="64" id="U4z-oi-6ST"/>
+                        <constraint firstAttribute="bottom" secondItem="BWo-yD-sHa" secondAttribute="bottom" id="Vqy-U8-b8m"/>
+                        <constraint firstItem="BWo-yD-sHa" firstAttribute="leading" secondItem="MxI-Wj-SbG" secondAttribute="leading" id="g4e-Gj-w8W"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-yD-sHa" userLabel="Separator">
-                    <rect key="frame" x="16" y="144" width="343" height="1"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCq-7d-1Fc">
+                    <rect key="frame" x="16" y="164" width="343" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vol vers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFQ-9E-n4a">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aéroport d'arrivée" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-xC-y8d">
+                            <rect key="frame" x="0.0" y="29" width="343" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5i-KJ-b0N">
+                            <rect key="frame" x="-4" y="29" width="351" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="searchDepartureAirport:" destination="-1" eventType="touchUpInside" id="DSf-S0-ihv"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rO-5U-M0d" userLabel="Separator">
+                            <rect key="frame" x="0.0" y="63" width="343" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="j3l-ZO-0t6"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="kLU-rs-zvw"/>
+                        <constraint firstItem="0rO-5U-M0d" firstAttribute="leading" secondItem="uCq-7d-1Fc" secondAttribute="leading" id="7sP-u3-Dnz"/>
+                        <constraint firstAttribute="trailing" secondItem="0rO-5U-M0d" secondAttribute="trailing" id="YHd-JB-OdN"/>
+                        <constraint firstAttribute="height" constant="64" id="l2H-Vj-uSX"/>
+                        <constraint firstAttribute="bottom" secondItem="0rO-5U-M0d" secondAttribute="bottom" id="tqP-Hl-HyD"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gh-k6-Kkb">
@@ -64,6 +108,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS9-DI-1cc">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Recherche"/>
                             <connections>
                                 <action selector="searchTrips:" destination="-1" eventType="touchUpInside" id="Qwg-JB-Gdf"/>
@@ -85,11 +130,11 @@
                 <constraint firstAttribute="bottom" secondItem="4gh-k6-Kkb" secondAttribute="bottom" id="BNs-GV-Mer"/>
                 <constraint firstAttribute="trailing" secondItem="4gh-k6-Kkb" secondAttribute="trailing" id="CBa-BX-SEw"/>
                 <constraint firstAttribute="trailing" secondItem="MxI-Wj-SbG" secondAttribute="trailing" constant="16" id="M55-0H-c5Y"/>
-                <constraint firstItem="BWo-yD-sHa" firstAttribute="top" secondItem="MxI-Wj-SbG" secondAttribute="bottom" id="Q0w-Wk-L1H"/>
-                <constraint firstItem="BWo-yD-sHa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="SvM-c0-fbf"/>
+                <constraint firstItem="uCq-7d-1Fc" firstAttribute="top" secondItem="MxI-Wj-SbG" secondAttribute="bottom" constant="20" id="PKA-3q-a7a"/>
                 <constraint firstItem="4gh-k6-Kkb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Wsc-cs-Off"/>
-                <constraint firstAttribute="trailing" secondItem="BWo-yD-sHa" secondAttribute="trailing" constant="16" id="ZGv-Fr-s7L"/>
+                <constraint firstAttribute="trailing" secondItem="uCq-7d-1Fc" secondAttribute="trailing" constant="16" id="rCx-p2-CSh"/>
                 <constraint firstItem="MxI-Wj-SbG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="tKb-Ie-CuS"/>
+                <constraint firstItem="uCq-7d-1Fc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="xWj-cd-Pj8"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="132.5"/>
         </view>
