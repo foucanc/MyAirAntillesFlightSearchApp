@@ -16,7 +16,7 @@ class FlightSearchViewModel: NSObject {
     
     func getTrips(completion: @escaping (Bool) -> Void) {
         
-        let url = URL + API_KEY
+        let url = URL_API + API_KEY
         
         let parameters: Parameters = [
             //"key": API_KEY,

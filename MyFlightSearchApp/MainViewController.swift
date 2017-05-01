@@ -13,6 +13,8 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var departureAirportLabel: UILabel!
+    @IBOutlet weak var arrivalAirportLabel: UILabel!
     
     var viewModel = MainViewModel()
     
@@ -46,11 +48,17 @@ class MainViewController: UIViewController {
         airportSearchVC.delegate = self
         self.present(airportSearchVC, animated: true,completion: nil)
     }
+    
+    func setEntry() {
+        
+    }
 
 }
 
 extension MainViewController: AirportSearchViewControllerProtocol {
-    func close(_ controller: UIViewController) {
+    func close(_ controller: UIViewController,airport: String) {
         controller.dismiss(animated: true, completion: nil)
+        //print(airport)
+        setEntry()
     }
 }

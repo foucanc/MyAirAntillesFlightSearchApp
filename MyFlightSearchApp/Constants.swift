@@ -8,5 +8,5 @@
 
 import Foundation
 
-let URL = "https://www.googleapis.com/qpxExpress/v1/trips/search?key="
+let URL_API = "https://www.googleapis.com/qpxExpress/v1/trips/search?key="
 let API_KEY = "YOUR_API_KEY"

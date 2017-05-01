@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MyFlightSearchApp" customModuleProvider="target">
             <connections>
+                <outlet property="arrivalAirportLabel" destination="OV2-xC-y8d" id="xfG-6S-3gm"/>
+                <outlet property="departureAirportLabel" destination="2IV-b8-ubf" id="UH8-O7-I3U"/>
                 <outlet property="searchButton" destination="CS9-DI-1cc" id="6eT-tf-ocM"/>
                 <outlet property="searchView" destination="4gh-k6-Kkb" id="50p-68-Ybc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3xg-Hw-GRG"/>
