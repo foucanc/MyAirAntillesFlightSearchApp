@@ -35,6 +35,9 @@
 		D917E1E21EA8D906002E345A /* Airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = D917E1DF1EA8D906002E345A /* Airplane.png */; };
 		D917E1E31EA8D906002E345A /* Airplane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D917E1E01EA8D906002E345A /* Airplane@2x.png */; };
 		D917E1E41EA8D906002E345A /* Airplane@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D917E1E11EA8D906002E345A /* Airplane@3x.png */; };
+		D9197BB41EBA08AA005C8878 /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = D9197BB11EBA08AA005C8878 /* Delete.png */; };
+		D9197BB51EBA08AA005C8878 /* Delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9197BB21EBA08AA005C8878 /* Delete@2x.png */; };
+		D9197BB61EBA08AA005C8878 /* Delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9197BB31EBA08AA005C8878 /* Delete@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		D917E1DF1EA8D906002E345A /* Airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airplane.png; sourceTree = "<group>"; };
 		D917E1E01EA8D906002E345A /* Airplane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airplane@2x.png"; sourceTree = "<group>"; };
 		D917E1E11EA8D906002E345A /* Airplane@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Airplane@3x.png"; sourceTree = "<group>"; };
+		D9197BB11EBA08AA005C8878 /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
+		D9197BB21EBA08AA005C8878 /* Delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete@2x.png"; sourceTree = "<group>"; };
+		D9197BB31EBA08AA005C8878 /* Delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete@3x.png"; sourceTree = "<group>"; };
 		F6580ED964328D0C76C733DC /* Pods_MyFlightSearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFlightSearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -262,6 +268,9 @@
 				D917E1DF1EA8D906002E345A /* Airplane.png */,
 				D917E1E01EA8D906002E345A /* Airplane@2x.png */,
 				D917E1E11EA8D906002E345A /* Airplane@3x.png */,
+				D9197BB11EBA08AA005C8878 /* Delete.png */,
+				D9197BB21EBA08AA005C8878 /* Delete@2x.png */,
+				D9197BB31EBA08AA005C8878 /* Delete@3x.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -337,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9197BB41EBA08AA005C8878 /* Delete.png in Resources */,
 				D914E6DB1EA6A6FD005C4541 /* FlightSearchView.xib in Resources */,
 				D917E1E41EA8D906002E345A /* Airplane@3x.png in Resources */,
 				D917E1E31EA8D906002E345A /* Airplane@2x.png in Resources */,
@@ -344,7 +354,9 @@
 				D91306191EB770CE000372DA /* AirportSearchViewCell.xib in Resources */,
 				D913061C1EB7894A000372DA /* airports.json in Resources */,
 				D914E6BB1EA6A2F2005C4541 /* LaunchScreen.storyboard in Resources */,
+				D9197BB61EBA08AA005C8878 /* Delete@3x.png in Resources */,
 				D914E6E01EA6A78F005C4541 /* FlightSearchCell.xib in Resources */,
+				D9197BB51EBA08AA005C8878 /* Delete@2x.png in Resources */,
 				D914E6B81EA6A2F2005C4541 /* Assets.xcassets in Resources */,
 				D900B22E1EAE403C00C1A077 /* AirportSearchView.xib in Resources */,
 				D917E1E21EA8D906002E345A /* Airplane.png in Resources */,

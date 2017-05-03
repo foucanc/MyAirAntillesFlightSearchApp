@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MyFlightSearchApp" customModuleProvider="target">
             <connections>
                 <outlet property="arrivalAirportLabel" destination="OV2-xC-y8d" id="xfG-6S-3gm"/>
+                <outlet property="departureAirportDeleteButton" destination="Bgc-hd-rx5" id="kAC-5f-x3d"/>
                 <outlet property="departureAirportLabel" destination="2IV-b8-ubf" id="UH8-O7-I3U"/>
                 <outlet property="searchButton" destination="CS9-DI-1cc" id="6eT-tf-ocM"/>
                 <outlet property="searchView" destination="4gh-k6-Kkb" id="50p-68-Ybc"/>
@@ -41,11 +42,11 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7A-Qh-2Ry">
-                            <rect key="frame" x="-4" y="29" width="351" height="35"/>
+                            <rect key="frame" x="-4" y="29" width="312" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="searchDepartureAirport:" destination="-1" eventType="touchUpInside" id="kML-Q1-yTf"/>
+                                <action selector="searchDepartureAirport:" destination="-1" eventType="touchUpInside" id="ys5-0F-Fv5"/>
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-yD-sHa" userLabel="Separator">
@@ -55,12 +56,26 @@
                                 <constraint firstAttribute="height" constant="1" id="kLU-rs-zvw"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgc-hd-rx5" userLabel="Delete">
+                            <rect key="frame" x="320" y="41" width="15" height="15"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="8av-DY-COI"/>
+                                <constraint firstAttribute="height" constant="15" id="F9u-nG-HUD"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Delete.png"/>
+                            <connections>
+                                <action selector="deleteDepartureAirport:" destination="-1" eventType="touchUpInside" id="zc1-8c-3R8"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="BWo-yD-sHa" secondAttribute="trailing" id="53g-yh-LNO"/>
                         <constraint firstAttribute="height" constant="64" id="U4z-oi-6ST"/>
                         <constraint firstAttribute="bottom" secondItem="BWo-yD-sHa" secondAttribute="bottom" id="Vqy-U8-b8m"/>
+                        <constraint firstAttribute="bottom" secondItem="Bgc-hd-rx5" secondAttribute="bottom" constant="8" id="b6a-uY-DeU"/>
+                        <constraint firstAttribute="trailing" secondItem="Bgc-hd-rx5" secondAttribute="trailing" constant="8" id="biU-tt-YWW"/>
                         <constraint firstItem="BWo-yD-sHa" firstAttribute="leading" secondItem="MxI-Wj-SbG" secondAttribute="leading" id="g4e-Gj-w8W"/>
                     </constraints>
                 </view>
@@ -82,11 +97,11 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5i-KJ-b0N">
-                            <rect key="frame" x="-4" y="29" width="351" height="35"/>
+                            <rect key="frame" x="-4" y="29" width="312" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="searchDepartureAirport:" destination="-1" eventType="touchUpInside" id="DSf-S0-ihv"/>
+                                <action selector="searchArrivalAirport:" destination="-1" eventType="touchUpInside" id="POe-Oz-ENI"/>
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rO-5U-M0d" userLabel="Separator">
@@ -96,12 +111,28 @@
                                 <constraint firstAttribute="height" constant="1" id="j3l-ZO-0t6"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qn-01-9YC" userLabel="Delete">
+                            <rect key="frame" x="320" y="41" width="15" height="15"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="enP-4z-gqe"/>
+                                <constraint firstAttribute="height" constant="15" id="k2l-FI-luo"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="Delete.png">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="deleteArrivalAirport:" destination="-1" eventType="touchUpInside" id="BZ8-Wl-H3w"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="0rO-5U-M0d" firstAttribute="leading" secondItem="uCq-7d-1Fc" secondAttribute="leading" id="7sP-u3-Dnz"/>
+                        <constraint firstAttribute="trailing" secondItem="5Qn-01-9YC" secondAttribute="trailing" constant="8" id="XHK-Cs-n5X"/>
                         <constraint firstAttribute="trailing" secondItem="0rO-5U-M0d" secondAttribute="trailing" id="YHd-JB-OdN"/>
                         <constraint firstAttribute="height" constant="64" id="l2H-Vj-uSX"/>
+                        <constraint firstAttribute="bottom" secondItem="5Qn-01-9YC" secondAttribute="bottom" constant="8" id="q1F-d5-pWc"/>
                         <constraint firstAttribute="bottom" secondItem="0rO-5U-M0d" secondAttribute="bottom" id="tqP-Hl-HyD"/>
                     </constraints>
                 </view>
@@ -141,4 +172,7 @@
             <point key="canvasLocation" x="33.5" y="132.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Delete.png" width="76" height="76"/>
+    </resources>
 </document>

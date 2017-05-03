@@ -12,7 +12,7 @@ import RxSwift
 import SwiftyJSON
 
 protocol AirportSearchViewControllerProtocol{
-    func close(_ controller: UIViewController, airport : String)
+    func close(_ controller: UIViewController, airport : String, index: Int)
 }
 
 class AirportSearchViewController: UIViewController {
@@ -25,6 +25,7 @@ class AirportSearchViewController: UIViewController {
     
     var shownCities = [String]()
     var airportsList = [String]()
+    var tag = Int()
     
     let disposeBag = DisposeBag() // Bag of disposables to release them when view is being deall
     
@@ -69,7 +70,7 @@ class AirportSearchViewController: UIViewController {
     }
 
     @IBAction func close(_ sender: UIBarButtonItem) {
-        self.delegate?.close(self, airport: "")
+        self.delegate?.close(self, airport: "", index: tag)
     }
 }
 
@@ -88,7 +89,7 @@ extension AirportSearchViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as? AirportSearchViewCell
-        self.delegate?.close(self, airport: (selectedCell?.airportLabel.text)!)
+        self.delegate?.close(self, airport: (selectedCell?.airportLabel.text)!, index: tag)
     }
  
 }

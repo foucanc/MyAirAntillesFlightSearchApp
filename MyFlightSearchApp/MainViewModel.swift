@@ -9,8 +9,9 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import RxCocoa
+import RxSwift
 
-class MainViewModel: NSObject {
-    
+class MainViewModel {
 
 }
