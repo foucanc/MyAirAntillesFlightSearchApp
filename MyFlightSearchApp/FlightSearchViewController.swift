@@ -10,13 +10,24 @@ import UIKit
 
 class FlightSearchViewController: UIViewController {
 
+    @IBOutlet var contentView: UIView!
     @IBOutlet weak var flightSearchTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var viewModel = FlightSearchViewModel()
     
+    var origin: String = ""
+    var destination: String = ""
+    var adult: String = ""
+    var child: String = ""
+    var baby: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        contentView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
+        flightSearchTableView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
+
+        initEntry()
         
         viewModel.getTrips() {updated in
             if(updated) {
@@ -46,12 +57,19 @@ class FlightSearchViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func initEntry() {
+        viewModel.origin = origin
+        viewModel.destination = destination
+        viewModel.adult = adult
+        viewModel.child = child
+        viewModel.baby = baby
+    }
 
 }
 
 extension FlightSearchViewController: UITableViewDelegate, UITableViewDataSource {
     
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

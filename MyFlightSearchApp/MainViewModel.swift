@@ -13,5 +13,45 @@ import RxCocoa
 import RxSwift
 
 class MainViewModel {
+    
+    var adultNumber = Variable<Int>(0)
+    var childNumber = Variable<Int>(0)
+    var babyNumber = Variable<Int>(0)
+    
+    func addAdultNumber() {
+        if (adultNumber.value < 9){
+            adultNumber.value = adultNumber.value + 1
+        }
+    }
+    
+    func addChildNumber() {
+        if (childNumber.value < 9){
+            childNumber.value = childNumber.value + 1
+        }
+    }
+    
+    func addBabyNumber() {
+        if (babyNumber.value < 9){
+            babyNumber.value = babyNumber.value + 1
+        }
+    }
+    
+    func removeAdultNumber() {
+        if (adultNumber.value > 0){
+            adultNumber.value = adultNumber.value - 1
+        }
+    }
+    
+    func removeChildNumber() {
+        if (childNumber.value > 0){
+            childNumber.value = childNumber.value - 1
+        }
+    }
+    
+    func removeBabyNumber() {
+        if (babyNumber.value > 0){
+            babyNumber.value = babyNumber.value - 1
+        }
+    }
 
 }

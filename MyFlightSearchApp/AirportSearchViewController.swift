@@ -17,13 +17,12 @@ protocol AirportSearchViewControllerProtocol{
 
 class AirportSearchViewController: UIViewController {
     
-
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var delegate: AirportSearchViewControllerProtocol?
     
-    var shownCities = [String]()
+    var shownAirports = [String]()
     var airportsList = [String]()
     var tag = Int()
     
@@ -43,10 +42,10 @@ class AirportSearchViewController: UIViewController {
             .orEmpty // Make it non-optional
             .subscribe(onNext: { [unowned self] query in // Here we will be notified of every new value
                 if(query != "") {
-                    self.shownCities = self.airportsList.filter { $0.capitalized.contains(query) }
+                    self.shownAirports = self.airportsList.filter { $0.capitalized.contains(query) }
                 }
                 else {
-                    self.shownCities = self.airportsList
+                    self.shownAirports = self.airportsList
                 }
                 self.tableView.reloadData() // And reload table view data.
             })
@@ -77,12 +76,12 @@ class AirportSearchViewController: UIViewController {
 extension AirportSearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shownCities.count
+        return shownAirports.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "airportSearchViewCell", for: indexPath) as! AirportSearchViewCell
-        cell.airportLabel.text = shownCities[indexPath.row]
+        cell.airportLabel.text = shownAirports[indexPath.row]
         
         return cell
     }

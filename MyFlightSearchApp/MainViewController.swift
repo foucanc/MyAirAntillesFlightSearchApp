@@ -19,7 +19,19 @@ class MainViewController: UIViewController {
     @IBOutlet weak var arrivalAirportLabel: UILabel!
     @IBOutlet weak var departureAirportDeleteButton: UIButton!
 
+    @IBOutlet weak var adultPlusButton: UIButton!
+    @IBOutlet weak var adultMinusButton: UIButton!
+    @IBOutlet weak var childPlusButton: UIButton!
+    @IBOutlet weak var childMinusButton: UIButton!
+    @IBOutlet weak var babyPlusButton: UIButton!
+    @IBOutlet weak var babyMinusButton: UIButton!
+    
+    @IBOutlet weak var adultNumberLabel: UILabel!
+    @IBOutlet weak var childNumberLabel: UILabel!
+    @IBOutlet weak var babyNumberLabel: UILabel!
+    
     var viewModel = MainViewModel()
+    var disposeBag = DisposeBag()
     
     class func mainViewController() -> MainViewController
     {
@@ -32,8 +44,33 @@ class MainViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         self.searchView.backgroundColor = UIColor(red: 78/255.0, green: 205/255.0, blue: 196/255.0, alpha: 1.0)
-        self.searchButton.tintColor = UIColor.white
         
+        self.viewModel.adultNumber
+            .asObservable()
+            .map { "\($0)"}
+            .bind(to: self.adultNumberLabel.rx.text)
+            .addDisposableTo(self.disposeBag)
+        
+        self.viewModel.childNumber
+            .asObservable()
+            .map { "\($0)"}
+            .bind(to: self.childNumberLabel.rx.text)
+            .addDisposableTo(self.disposeBag)
+        
+        self.viewModel.babyNumber
+            .asObservable()
+            .map { "\($0)"}
+            .bind(to: self.babyNumberLabel.rx.text)
+            .addDisposableTo(self.disposeBag)
+        
+        initStateButton()
+        
+    }
+    
+    func initStateButton() {
+        enableButton(entryNumber: self.viewModel.adultNumber.value, minusButton: self.adultMinusButton, plusButton: self.adultPlusButton)
+        enableButton(entryNumber: self.viewModel.childNumber.value, minusButton: self.childMinusButton, plusButton: self.childPlusButton)
+        enableButton(entryNumber: self.viewModel.babyNumber.value, minusButton: self.babyMinusButton, plusButton: self.babyPlusButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,8 +78,22 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func searchAirport(index: Int) {
+        let airportSearchVC = AirportSearchViewController(nibName: "AirportSearchView", bundle: Bundle.main)
+        airportSearchVC.delegate = self
+        airportSearchVC.tag = index
+        self.present(airportSearchVC, animated: true,completion: nil)
+    }
+    
     @IBAction func searchTrips(_ sender: Any) {
         let flightSearchVC = FlightSearchViewController(nibName: "FlightSearchView", bundle: nil)
+    
+        flightSearchVC.origin = AirportUtil.getAirportCode(airport: departureAirportLabel.text!)
+        flightSearchVC.destination = AirportUtil.getAirportCode(airport: arrivalAirportLabel.text!)
+        flightSearchVC.adult = String(self.viewModel.adultNumber.value)
+        flightSearchVC.child = String(self.viewModel.childNumber.value)
+        flightSearchVC.baby = String(self.viewModel.babyNumber.value)
+
         self.navigationController?.pushViewController(flightSearchVC, animated: true)
     }
     
@@ -55,11 +106,41 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func deleteDepartureAirport(_ sender: Any) {
-        setEntry(text: "aéroport de départ", index: 2)
+        setEntry(text: Default.departure_text.rawValue, index: 2)
     }
 
     @IBAction func deleteArrivalAirport(_ sender: Any) {
-        setEntry(text: "aéroport d'arrivée", index: 3)
+        setEntry(text: Default.arrival_text.rawValue, index: 3)
+    }
+    
+    @IBAction func addAdult(_ sender: Any) {
+        self.viewModel.addAdultNumber()
+        enableButton(entryNumber: self.viewModel.adultNumber.value, minusButton: self.adultMinusButton, plusButton: self.adultPlusButton)
+    }
+    
+    @IBAction func removeAdult(_ sender: Any) {
+        self.viewModel.removeAdultNumber()
+        enableButton(entryNumber: self.viewModel.adultNumber.value, minusButton: self.adultMinusButton, plusButton: self.adultPlusButton)
+    }
+    
+    @IBAction func addChild(_ sender: Any) {
+        self.viewModel.addChildNumber()
+        enableButton(entryNumber: self.viewModel.childNumber.value, minusButton: self.childMinusButton, plusButton: self.childPlusButton)
+    }
+    
+    @IBAction func removeChild(_ sender: Any) {
+        self.viewModel.removeChildNumber()
+        enableButton(entryNumber: self.viewModel.childNumber.value, minusButton: self.childMinusButton, plusButton: self.childPlusButton)
+    }
+
+    @IBAction func addBaby(_ sender: Any) {
+        self.viewModel.addBabyNumber()
+        enableButton(entryNumber: self.viewModel.babyNumber.value, minusButton: self.babyMinusButton, plusButton: self.babyPlusButton)
+    }
+
+    @IBAction func removeBaby(_ sender: Any) {
+        self.viewModel.removeBabyNumber()
+        enableButton(entryNumber: self.viewModel.babyNumber.value, minusButton: self.babyMinusButton, plusButton: self.babyPlusButton)
     }
 
     func setEntry(text: String, index: Int) {
@@ -78,18 +159,23 @@ class MainViewController: UIViewController {
             break
         case 3:
             arrivalAirportLabel.textColor = UIColor.lightGray
-            arrivalAirportLabel.text = "aéroport d'arrivée"
+            arrivalAirportLabel.text = text
             break
         default:
             break
         }
     }
     
-    func searchAirport(index: Int) {
-        let airportSearchVC = AirportSearchViewController(nibName: "AirportSearchView", bundle: Bundle.main)
-        airportSearchVC.delegate = self
-        airportSearchVC.tag = index
-        self.present(airportSearchVC, animated: true,completion: nil)
+    func enableButton(entryNumber: Int, minusButton: UIButton, plusButton: UIButton) {
+        switch entryNumber {
+        case 0:
+            minusButton.isEnabled = false
+        case 9:
+            plusButton.isEnabled = false
+        default:
+            plusButton.isEnabled = true
+            minusButton.isEnabled = true
+        }
     }
 
 }

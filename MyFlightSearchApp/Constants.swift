@@ -10,3 +10,8 @@ import Foundation
 
 let URL_API = "https://www.googleapis.com/qpxExpress/v1/trips/search?key="
 let API_KEY = "YOUR_API_KEY"
+
+enum Default : String {
+    case departure_text = "aéroport de départ"
+    case arrival_text = "aéroport d'arrivée"
+}

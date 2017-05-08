@@ -26,3 +26,18 @@ class Conversion {
         return str
     }
 }
+
+class AirportUtil {
+    
+    static func getAirportCode(airport: String) -> String {
+        var a = ""
+        if (airport != Default.arrival_text.rawValue) {
+            let arrival = airport.substring(from:airport.index(airport.endIndex, offsetBy: -3))
+            a = arrival
+        }
+        else {
+            a = ""
+        }
+        return a
+    }
+}

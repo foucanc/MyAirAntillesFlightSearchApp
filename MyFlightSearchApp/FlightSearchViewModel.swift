@@ -9,10 +9,16 @@
 import Alamofire
 import SwiftyJSON
 
-class FlightSearchViewModel: NSObject {
+class FlightSearchViewModel {
     
     var tripArray = [Trip]()
     var airportArray = [Airport]()
+    
+    var origin: String = ""
+    var destination: String = ""
+    var adult: String = ""
+    var child: String = ""
+    var baby: String = ""
     
     func getTrips(completion: @escaping (Bool) -> Void) {
         
@@ -23,16 +29,16 @@ class FlightSearchViewModel: NSObject {
             "request": [
                 "slice": [
                     [
-                        "origin": "FDF",
-                        "destination": "PTP",
-                        "date": "2017-05-20"
+                        "origin": origin,
+                        "destination": destination,
+                        "date": "2017-05-13"
                     ]
                 ],
                 "passengers": [
-                    "adultCount": 1,
-                    "infantInLapCount": 0,
+                    "adultCount": adult,
+                    "infantInLapCount": baby,
                     "infantInSeatCount": 0,
-                    "childCount": 0,
+                    "childCount": child,
                     "seniorCount": 0
                 ],
                 "solutions": 100,
@@ -84,8 +90,10 @@ class FlightSearchViewModel: NSObject {
             cell.departureHourLabel.text = DateHourUtil.hourToString(date: departureTimeStr!)
             cell.arrivalHourLabel.text = DateHourUtil.hourToString(date: arrivalTimeStr!)
             
-            cell.tripView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
-            cell.salePriceView.backgroundColor = UIColor(red: 78/255.0, green: 205/255.0, blue: 196/255.0, alpha: 1.0)
+            cell.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
+            cell.tripView.backgroundColor = UIColor.white
+            cell.salePriceView.backgroundColor = UIColor.white
+            cell.salePriceLabel.textColor = UIColor(red: 78/255.0, green: 205/255.0, blue: 196/255.0, alpha: 1.0)
 
         }
         return cell
