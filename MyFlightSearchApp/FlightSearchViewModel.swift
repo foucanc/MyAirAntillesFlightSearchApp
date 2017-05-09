@@ -31,7 +31,7 @@ class FlightSearchViewModel {
                     [
                         "origin": origin,
                         "destination": destination,
-                        "date": "2017-05-13"
+                        "date": "2017-05-15"
                     ]
                 ],
                 "passengers": [
@@ -57,10 +57,11 @@ class FlightSearchViewModel {
                     let airports = AirportParser.shared.parseObjects(jsonDic: json) as! [Airport]
                     
                     let companyArray = datas.filter(){$0.segments[0].company == Default.air_antilles.rawValue}
-                    for data in companyArray {
+                    let companyArrayFiltered = companyArray.filter(){$0.segments.last?.destination == self.destination}
+                    for data in companyArrayFiltered {
                         self.tripArray.append(data)
                     }
-                    print(self.tripArray)
+                    //print(self.tripArray)
                     for airport in airports {
                         self.airportArray.append(airport)
                     }
@@ -82,12 +83,12 @@ class FlightSearchViewModel {
             cell.salePriceLabel.text = Conversion.eurCurrency(price: tripArray[indexPath.row].salePrice) 
                 
             cell.departureAirportCodeLabel.text = tripArray[indexPath.row].segments.first?.origin
-            cell.arrivalAirportCodeLabel.text = tripArray[indexPath.row].segments.first?.destination
+            cell.arrivalAirportCodeLabel.text = tripArray[indexPath.row].segments.last?.destination
             cell.departureAirportLabel.text = airportArray.filter(){$0.code == tripArray[indexPath.row].segments.first?.origin}.first?.name
-            cell.arrivalAirportLabel.text = airportArray.filter(){$0.code == tripArray[indexPath.row].segments.first?.destination}.first?.name
+            cell.arrivalAirportLabel.text = airportArray.filter(){$0.code == tripArray[indexPath.row].segments.last?.destination}.first?.name
 
             let departureTimeStr = tripArray[indexPath.row].segments.first?.departureTime
-            let arrivalTimeStr = tripArray[indexPath.row].segments.first?.arrivalTime
+            let arrivalTimeStr = tripArray[indexPath.row].segments.last?.arrivalTime
             cell.departureHourLabel.text = DateHourUtil.hourToString(date: departureTimeStr!)
             cell.arrivalHourLabel.text = DateHourUtil.hourToString(date: arrivalTimeStr!)
             
@@ -95,7 +96,6 @@ class FlightSearchViewModel {
             cell.tripView.backgroundColor = UIColor.white
             cell.salePriceView.backgroundColor = UIColor.white
             cell.salePriceLabel.textColor = UIColor(red: 78/255.0, green: 205/255.0, blue: 196/255.0, alpha: 1.0)
-
         }
         return cell
     }
