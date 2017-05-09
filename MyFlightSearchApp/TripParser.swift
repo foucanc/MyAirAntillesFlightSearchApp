@@ -8,12 +8,13 @@
 
 import Foundation
 import SwiftyJSON
+import RealmSwift
 
 struct TripParser: Parser {
     
     static var shared = TripParser()
     
-    func parseObjects(jsonDic: JSON) -> [NSObject] {
+    func parseObjects(jsonDic: JSON) -> [Object] {
         var infos = [Trip]()
         for index in jsonDic["trips"]["tripOption"] {
             let trip = self.tripObj(dic: index.1)

@@ -7,19 +7,20 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Trip: NSObject {
-    var code = ""
-    var id = ""
-    var country = ""
-    var salePrice = ""
-    var segments = Array<Segment>()
+class Trip: Object {
+    dynamic var code = ""
+    dynamic var id = ""
+    dynamic var country = ""
+    dynamic var salePrice = ""
+    let segments = List<Segment>()
 }
 
-class Segment: NSObject {
-    var arrivalTime = ""
-    var departureTime = ""
-    var origin = ""
-    var destination = ""
-    var company = ""
+class Segment: Object {
+    dynamic var arrivalTime = ""
+    dynamic var departureTime = ""
+    dynamic var origin = ""
+    dynamic var destination = ""
+    dynamic var company = ""
 }

@@ -14,4 +14,5 @@ let API_KEY = "YOUR_API_KEY"
 enum Default : String {
     case departure_text = "aéroport de départ"
     case arrival_text = "aéroport d'arrivée"
+    case air_antilles = "3S"
 }

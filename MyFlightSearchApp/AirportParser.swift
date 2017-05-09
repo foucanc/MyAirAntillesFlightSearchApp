@@ -8,12 +8,13 @@
 
 import Foundation
 import SwiftyJSON
+import RealmSwift
 
 class AirportParser: NSObject {
 
     static var shared = AirportParser()
     
-    func parseObjects(jsonDic: JSON) -> [NSObject] {
+    func parseObjects(jsonDic: JSON) -> [Object] {
         var infos = [Airport]()
         for index in jsonDic["trips"]["data"]["airport"] {
             //print(index.1)

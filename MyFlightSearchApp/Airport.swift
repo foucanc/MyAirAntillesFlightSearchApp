@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import RealmSwift
 
-class Airport: NSObject {
-    var code = ""
-    var city = ""
-    var name = ""
+class Airport: Object {
+    dynamic var code = ""
+    dynamic var city = ""
+    dynamic var name = ""
 }

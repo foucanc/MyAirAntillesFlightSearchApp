@@ -7,7 +7,8 @@
 //
 
 import SwiftyJSON
+import RealmSwift
 
 protocol Parser {
-    func parseObjects(jsonDic: JSON) -> [NSObject]
+    func parseObjects(jsonDic: JSON) -> [Object]
 }

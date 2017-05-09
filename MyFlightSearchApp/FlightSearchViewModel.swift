@@ -56,10 +56,11 @@ class FlightSearchViewModel {
                     let datas = TripParser.shared.parseObjects(jsonDic: json) as! [Trip]
                     let airports = AirportParser.shared.parseObjects(jsonDic: json) as! [Airport]
                     
-                    let companyArray = datas.filter(){$0.segments[0].company == "3S"}
+                    let companyArray = datas.filter(){$0.segments[0].company == Default.air_antilles.rawValue}
                     for data in companyArray {
                         self.tripArray.append(data)
                     }
+                    print(self.tripArray)
                     for airport in airports {
                         self.airportArray.append(airport)
                     }

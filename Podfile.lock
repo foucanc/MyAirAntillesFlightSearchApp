@@ -5,6 +5,11 @@ PODS:
     - ReactiveKit (~> 3.5.1)
   - Diff (0.5.3)
   - ReactiveKit (3.5.1)
+  - Realm (2.6.2):
+    - Realm/Headers (= 2.6.2)
+  - Realm/Headers (2.6.2)
+  - RealmSwift (2.6.2):
+    - Realm (= 2.6.2)
   - RxCocoa (3.4.0):
     - RxSwift (~> 3.4)
   - RxSwift (3.4.0)
@@ -13,6 +18,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - Bond
+  - RealmSwift
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - SwiftyJSON
@@ -22,10 +28,12 @@ SPEC CHECKSUMS:
   Bond: c54dc8e6ad4f2d4e3d60c680c25637a7824161df
   Diff: befa1d19c32726b2b36ce915d98793e2fbde8dcc
   ReactiveKit: aa0faf668053e7fddd6a07829ba3696741cbff37
+  Realm: 29222766425b9f831228f81b63f0e38a97a4d700
+  RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
   RxCocoa: d14ef6b6029e1ddc6e966508c09289090de68ff9
   RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 6deacab22d7c1ef8e26122d9e1249e6afc057c5e
+PODFILE CHECKSUM: f4fbf5faea8f5c684bea783f1124e02c02795202
 
 COCOAPODS: 1.1.1

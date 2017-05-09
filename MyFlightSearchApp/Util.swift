@@ -25,6 +25,11 @@ class Conversion {
         let str = price.replacingOccurrences(of: "EUR", with: "") + " €"
         return str
     }
+    
+    static func usdCurrency(price: String) -> String {
+        let str = price.replacingOccurrences(of: "USD", with: "") + " $"
+        return str
+    }
 }
 
 class AirportUtil {
