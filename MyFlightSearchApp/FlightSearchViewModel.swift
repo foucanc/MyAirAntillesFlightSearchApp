@@ -80,8 +80,10 @@ class FlightSearchViewModel {
             let imageName = "Airplane.png"
             let image = UIImage(named: imageName)
             cell.airplaneImageView.image = image
-            cell.salePriceLabel.text = Conversion.eurCurrency(price: tripArray[indexPath.row].salePrice) 
-                
+            cell.salePriceLabel.text = Conversion.Currency(price: tripArray[indexPath.row].salePrice)
+            if((cell.salePriceLabel.text?.characters.count)! > 8) {
+                cell.salePriceLabel.font = cell.salePriceLabel.font.withSize(23)
+            }
             cell.departureAirportCodeLabel.text = tripArray[indexPath.row].segments.first?.origin
             cell.arrivalAirportCodeLabel.text = tripArray[indexPath.row].segments.last?.destination
             cell.departureAirportLabel.text = airportArray.filter(){$0.code == tripArray[indexPath.row].segments.first?.origin}.first?.name

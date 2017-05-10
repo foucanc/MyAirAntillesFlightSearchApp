@@ -21,15 +21,17 @@ class DateHourUtil {
 
 class Conversion {
     
-    static func eurCurrency(price: String) -> String {
-        let str = price.replacingOccurrences(of: "EUR", with: "") + " €"
+    static func Currency(price: String) -> String {
+        var str = ""
+        if (price.contains("EUR")) {
+            str = price.replacingOccurrences(of: "EUR", with: "") + " €"
+        }
+        if (price.contains("USD")) {
+            str = price.replacingOccurrences(of: "USD", with: "") + " $"
+        }
         return str
     }
-    
-    static func usdCurrency(price: String) -> String {
-        let str = price.replacingOccurrences(of: "USD", with: "") + " $"
-        return str
-    }
+
 }
 
 class AirportUtil {
