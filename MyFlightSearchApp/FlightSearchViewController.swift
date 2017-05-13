@@ -13,8 +13,10 @@ class FlightSearchViewController: UIViewController {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var flightSearchTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var messageLabel: UILabel!
     
     var viewModel = FlightSearchViewModel()
+    var mainViewModel = MainViewModel()
     
     var origin: String = ""
     var destination: String = ""
@@ -27,19 +29,24 @@ class FlightSearchViewController: UIViewController {
         contentView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
         flightSearchTableView.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
 
-        initEntry()
-        
+        initialize()
+
         viewModel.getTrips() {updated in
             if(updated) {
                 
                 self.flightSearchTableView.reloadData()
                 self.activityIndicatorView.stopAnimating()
                 self.activityIndicatorView.isHidden = true
+                if(self.viewModel.tripArray.count == 0) {
+                    self.messageLabel.text = "Aucun vol trouvé."
+                }
             }
             else {
                 print("error")
                 self.activityIndicatorView.stopAnimating()
                 self.activityIndicatorView.isHidden = true
+                self.messageLabel.text = "Erreur."
+                
             }
         }
 
@@ -58,7 +65,7 @@ class FlightSearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func initEntry() {
+    func initialize() {
         viewModel.origin = origin
         viewModel.destination = destination
         viewModel.adult = adult
@@ -86,5 +93,13 @@ extension FlightSearchViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
+//    
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
 
 }

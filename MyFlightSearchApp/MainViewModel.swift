@@ -14,9 +14,22 @@ import RxSwift
 
 class MainViewModel {
     
+    var currencyArray = [Currency]()
     var adultNumber = Variable<Int>(0)
     var childNumber = Variable<Int>(0)
     var babyNumber = Variable<Int>(0)
+    
+    func getCurrencySymbol() {
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: "currencies", ofType: "json")!)
+        let data = try! Data(contentsOf: url)
+        let json = JSON(data: data)
+        let currencies = CurrencyParser.shared.parseObjects(jsonDic: json) as! [Currency]
+        CurrencyService.shared.updateServiceMessage(currencyObject: currencies) { (update, error) in }
+        for index in currencies {
+            currencyArray.append(index)
+        }
+        
+    }
     
     func addAdultNumber() {
         if (adultNumber.value < 9){

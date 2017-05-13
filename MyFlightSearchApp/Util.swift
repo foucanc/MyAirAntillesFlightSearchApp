@@ -21,14 +21,19 @@ class DateHourUtil {
 
 class Conversion {
     
-    static func Currency(price: String) -> String {
+    static func getSymbol(price: String) -> String {
         var str = ""
-        if (price.contains("EUR")) {
-            str = price.replacingOccurrences(of: "EUR", with: "") + " €"
-        }
-        if (price.contains("USD")) {
-            str = price.replacingOccurrences(of: "USD", with: "") + " $"
-        }
+        let index = price.index(price.startIndex, offsetBy: 3)
+        str = price.substring(to: index)
+        return str
+    }
+    
+    static func getSalePrice(price: String, currency :String) -> String {
+        var str = ""
+        
+        let index = price.index(price.startIndex, offsetBy: 3)
+        str = price.substring(from: index) + " " + currency
+        
         return str
     }
 

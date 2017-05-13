@@ -41,5 +41,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Billabong.ttf</string>
+		<string>Billabong</string>
+	</array>
 </dict>
 </plist>

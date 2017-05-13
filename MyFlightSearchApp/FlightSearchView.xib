@@ -14,6 +14,7 @@
                 <outlet property="activityIndicatorView" destination="BRK-xH-Y1m" id="lkU-SO-dd3"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="AVv-LH-MAU"/>
                 <outlet property="flightSearchTableView" destination="3LG-1O-Wfz" id="IvT-JO-baB"/>
+                <outlet property="messageLabel" destination="WpI-aa-zSQ" id="XTn-6p-Q20"/>
                 <outlet property="view" destination="iN0-l3-epB" id="jPw-sH-skX"/>
             </connections>
         </placeholder>
@@ -30,12 +31,25 @@
                     <rect key="frame" x="177" y="323" width="20" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpI-aa-zSQ">
+                    <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ztX-uY-hhB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.58067350080000002" green="0.96330068260000001" blue="0.53175483369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="3LG-1O-Wfz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="D0r-vs-yo2"/>
                 <constraint firstAttribute="trailing" secondItem="3LG-1O-Wfz" secondAttribute="trailing" id="Mqv-fn-PVc"/>
+                <constraint firstItem="WpI-aa-zSQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bSl-Y3-BQB"/>
+                <constraint firstItem="WpI-aa-zSQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="e46-bn-L1U"/>
                 <constraint firstItem="3LG-1O-Wfz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fpy-Hf-COC"/>
+                <constraint firstItem="WpI-aa-zSQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="j2J-dc-DG0"/>
+                <constraint firstAttribute="trailing" secondItem="WpI-aa-zSQ" secondAttribute="trailing" id="mqz-fD-9Xl"/>
                 <constraint firstAttribute="bottom" secondItem="3LG-1O-Wfz" secondAttribute="bottom" id="zhR-xz-Fr5"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>

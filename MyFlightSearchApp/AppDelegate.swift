@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let ctrl = MainViewController.mainViewController()
         let navigationCtrl = UINavigationController.init(rootViewController: ctrl)
+        //navigationCtrl.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.red]
+        navigationCtrl.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Billabong", size: 32.0)!,NSForegroundColorAttributeName : UIColor.darkGray]
+        
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigationCtrl
         self.window?.makeKeyAndVisible()

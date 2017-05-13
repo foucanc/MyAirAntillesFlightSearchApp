@@ -41,7 +41,15 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Rechercher un vol"
+
+        let backButton = UIBarButtonItem(
+            title: "Retour",
+            style: UIBarButtonItemStyle.plain,
+            target: nil,
+            action: nil
+        )
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         // Do any additional setup after loading the view.
         self.searchView.backgroundColor = UIColor(red: 78/255.0, green: 205/255.0, blue: 196/255.0, alpha: 1.0)
         
@@ -63,14 +71,17 @@ class MainViewController: UIViewController {
             .bind(to: self.babyNumberLabel.rx.text)
             .addDisposableTo(self.disposeBag)
         
-        initStateButton()
+        initialize()
         
     }
     
-    func initStateButton() {
+    func initialize() {
         enableButton(entryNumber: self.viewModel.adultNumber.value, minusButton: self.adultMinusButton, plusButton: self.adultPlusButton)
         enableButton(entryNumber: self.viewModel.childNumber.value, minusButton: self.childMinusButton, plusButton: self.childPlusButton)
         enableButton(entryNumber: self.viewModel.babyNumber.value, minusButton: self.babyMinusButton, plusButton: self.babyPlusButton)
+        
+        self.viewModel.getCurrencySymbol()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -153,14 +164,6 @@ class MainViewController: UIViewController {
             arrivalAirportLabel.textColor = UIColor.black
             arrivalAirportLabel.text = text
             break
-        case 2:
-            departureAirportLabel.textColor = UIColor.lightGray
-            departureAirportLabel.text = text
-            break
-        case 3:
-            arrivalAirportLabel.textColor = UIColor.lightGray
-            arrivalAirportLabel.text = text
-            break
         default:
             break
         }
@@ -182,7 +185,9 @@ class MainViewController: UIViewController {
 
 extension MainViewController: AirportSearchViewControllerProtocol {
     func close(_ controller: UIViewController,airport: String, index: Int) {
+        if(airport != "") {
+            setEntry(text: airport, index: index)
+        }
         controller.dismiss(animated: true, completion: nil)
-        setEntry(text: airport, index: index)
     }
 }

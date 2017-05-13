@@ -18,6 +18,10 @@
 		D91306171EB770C3000372DA /* AirportSearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91306161EB770C3000372DA /* AirportSearchViewCell.swift */; };
 		D91306191EB770CE000372DA /* AirportSearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D91306181EB770CE000372DA /* AirportSearchViewCell.xib */; };
 		D913061C1EB7894A000372DA /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = D913061B1EB7894A000372DA /* airports.json */; };
+		D9137B961EC73363004AD6D3 /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = D9137B951EC73363004AD6D3 /* currencies.json */; };
+		D9137B981EC733AB004AD6D3 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9137B971EC733AB004AD6D3 /* Currency.swift */; };
+		D9137B9A1EC73664004AD6D3 /* CurrencyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9137B991EC73664004AD6D3 /* CurrencyParser.swift */; };
+		D9137B9D1EC7431A004AD6D3 /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9137B9C1EC7431A004AD6D3 /* CurrencyService.swift */; };
 		D914E6B11EA6A2F2005C4541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914E6B01EA6A2F2005C4541 /* AppDelegate.swift */; };
 		D914E6B81EA6A2F2005C4541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D914E6B71EA6A2F2005C4541 /* Assets.xcassets */; };
 		D914E6BB1EA6A2F2005C4541 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D914E6B91EA6A2F2005C4541 /* LaunchScreen.storyboard */; };
@@ -50,6 +54,7 @@
 		D947B4871EBFDB9400DE007A /* Minus-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = D947B4841EBFDB9400DE007A /* Minus-disabled.png */; };
 		D947B4881EBFDB9400DE007A /* Minus-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D947B4851EBFDB9400DE007A /* Minus-disabled@2x.png */; };
 		D947B4891EBFDB9400DE007A /* Minus-disabled@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D947B4861EBFDB9400DE007A /* Minus-disabled@3x.png */; };
+		D958996C1EC5D31F00B06E36 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D90480501EC4A35600CCADE9 /* Billabong.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,12 +64,17 @@
 		D900B2291EAE400700C1A077 /* AirportSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchViewController.swift; sourceTree = "<group>"; };
 		D900B22B1EAE402500C1A077 /* AirportSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchViewModel.swift; sourceTree = "<group>"; };
 		D900B22D1EAE403C00C1A077 /* AirportSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirportSearchView.xib; sourceTree = "<group>"; };
+		D90480501EC4A35600CCADE9 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 		D9050F7D1EAF395400D8E9AD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D90CD7271EAD0E8100AB2CF9 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		D90CD7291EAD0F4500AB2CF9 /* AirportParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportParser.swift; sourceTree = "<group>"; };
 		D91306161EB770C3000372DA /* AirportSearchViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchViewCell.swift; sourceTree = "<group>"; };
 		D91306181EB770CE000372DA /* AirportSearchViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirportSearchViewCell.xib; sourceTree = "<group>"; };
 		D913061B1EB7894A000372DA /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
+		D9137B951EC73363004AD6D3 /* currencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
+		D9137B971EC733AB004AD6D3 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		D9137B991EC73664004AD6D3 /* CurrencyParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyParser.swift; sourceTree = "<group>"; };
+		D9137B9C1EC7431A004AD6D3 /* CurrencyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 		D914E6AD1EA6A2F2005C4541 /* MyFlightSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFlightSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D914E6B01EA6A2F2005C4541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D914E6B71EA6A2F2005C4541 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +153,14 @@
 			name = AirportSearch;
 			sourceTree = "<group>";
 		};
+		D904804F1EC4A33E00CCADE9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D90480501EC4A35600CCADE9 /* Billabong.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		D91306151EB7709D000372DA /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,8 +174,17 @@
 			isa = PBXGroup;
 			children = (
 				D913061B1EB7894A000372DA /* airports.json */,
+				D9137B951EC73363004AD6D3 /* currencies.json */,
 			);
 			name = JSON;
+			sourceTree = "<group>";
+		};
+		D9137B9B1EC742FD004AD6D3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D9137B9C1EC7431A004AD6D3 /* CurrencyService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		D914E6A41EA6A2F2005C4541 = {
@@ -206,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				D914E6C41EA6A3E7005C4541 /* Remote */,
+				D9137B9B1EC742FD004AD6D3 /* Services */,
 				D900B2251EADDE9F00C1A077 /* Utils */,
 			);
 			name = Common;
@@ -225,6 +253,7 @@
 			children = (
 				D914E6D41EA6A516005C4541 /* TripParser.swift */,
 				D90CD7291EAD0F4500AB2CF9 /* AirportParser.swift */,
+				D9137B991EC73664004AD6D3 /* CurrencyParser.swift */,
 				D914E6D21EA6A507005C4541 /* Parser.swift */,
 			);
 			name = Parser;
@@ -235,6 +264,7 @@
 			children = (
 				D914E6D01EA6A4DB005C4541 /* Trip.swift */,
 				D90CD7271EAD0E8100AB2CF9 /* Airport.swift */,
+				D9137B971EC733AB004AD6D3 /* Currency.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -272,6 +302,7 @@
 		D917E1DC1EA8D78C002E345A /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				D904804F1EC4A33E00CCADE9 /* Fonts */,
 				D917E1DD1EA8D7AE002E345A /* Images */,
 				D913061A1EB78924000372DA /* JSON */,
 			);
@@ -392,11 +423,13 @@
 				D947B46D1EBF711B00DE007A /* Minus@2x.png in Resources */,
 				D947B47D1EBFAFE400DE007A /* Plus-disabled@3x.png in Resources */,
 				D914E6CC1EA6A440005C4541 /* MainView.xib in Resources */,
+				D9137B961EC73363004AD6D3 /* currencies.json in Resources */,
 				D91306191EB770CE000372DA /* AirportSearchViewCell.xib in Resources */,
 				D913061C1EB7894A000372DA /* airports.json in Resources */,
 				D947B46F1EBF711B00DE007A /* Plus.png in Resources */,
 				D914E6BB1EA6A2F2005C4541 /* LaunchScreen.storyboard in Resources */,
 				D9197BB61EBA08AA005C8878 /* Delete@3x.png in Resources */,
+				D958996C1EC5D31F00B06E36 /* Billabong.ttf in Resources */,
 				D914E6E01EA6A78F005C4541 /* FlightSearchCell.xib in Resources */,
 				D9197BB51EBA08AA005C8878 /* Delete@2x.png in Resources */,
 				D914E6B81EA6A2F2005C4541 /* Assets.xcassets in Resources */,
@@ -476,9 +509,12 @@
 				D90CD72A1EAD0F4500AB2CF9 /* AirportParser.swift in Sources */,
 				D91306171EB770C3000372DA /* AirportSearchViewCell.swift in Sources */,
 				D90CD7281EAD0E8100AB2CF9 /* Airport.swift in Sources */,
+				D9137B9D1EC7431A004AD6D3 /* CurrencyService.swift in Sources */,
 				D900B2271EADDEB500C1A077 /* Util.swift in Sources */,
 				D914E6D91EA6A6E0005C4541 /* FlightSearchViewController.swift in Sources */,
 				D914E6D31EA6A507005C4541 /* Parser.swift in Sources */,
+				D9137B9A1EC73664004AD6D3 /* CurrencyParser.swift in Sources */,
+				D9137B981EC733AB004AD6D3 /* Currency.swift in Sources */,
 				D914E6CA1EA6A432005C4541 /* MainViewController.swift in Sources */,
 				D914E6CE1EA6A459005C4541 /* MainViewModel.swift in Sources */,
 				D900B22A1EAE400700C1A077 /* AirportSearchViewController.swift in Sources */,

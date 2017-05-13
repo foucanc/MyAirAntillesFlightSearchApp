@@ -13,6 +13,7 @@ class FlightSearchViewModel {
     
     var tripArray = [Trip]()
     var airportArray = [Airport]()
+    var currencyArray = [Currency]()
     
     var origin: String = ""
     var destination: String = ""
@@ -31,7 +32,7 @@ class FlightSearchViewModel {
                     [
                         "origin": origin,
                         "destination": destination,
-                        "date": "2017-05-15"
+                        "date": "2017-05-21"
                     ]
                 ],
                 "passengers": [
@@ -53,6 +54,7 @@ class FlightSearchViewModel {
                 if response.data != nil {
                     let data: Data = response.data!
                     let json = JSON(data: data)
+                    print(json)
                     let datas = TripParser.shared.parseObjects(jsonDic: json) as! [Trip]
                     let airports = AirportParser.shared.parseObjects(jsonDic: json) as! [Airport]
                     
@@ -80,7 +82,16 @@ class FlightSearchViewModel {
             let imageName = "Airplane.png"
             let image = UIImage(named: imageName)
             cell.airplaneImageView.image = image
-            cell.salePriceLabel.text = Conversion.Currency(price: tripArray[indexPath.row].salePrice)
+            
+            //Saleprice
+            currencyArray.removeAll()
+            for index in CurrencyService.shared.currency {
+                currencyArray.append(index)
+            }
+            let currency = currencyArray.filter(){$0.code == Conversion.getSymbol(price: self.tripArray[indexPath.row].salePrice)}.first?.symbol
+            
+            cell.salePriceLabel.text = Conversion.getSalePrice(price: self.tripArray[indexPath.row].salePrice, currency: currency!)
+            
             if((cell.salePriceLabel.text?.characters.count)! > 8) {
                 cell.salePriceLabel.font = cell.salePriceLabel.font.withSize(23)
             }
