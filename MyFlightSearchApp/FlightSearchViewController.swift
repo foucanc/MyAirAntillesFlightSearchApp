@@ -23,6 +23,7 @@ class FlightSearchViewController: UIViewController {
     var adult: String = ""
     var child: String = ""
     var baby: String = ""
+    var date: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +72,7 @@ class FlightSearchViewController: UIViewController {
         viewModel.adult = adult
         viewModel.child = child
         viewModel.baby = baby
+        viewModel.date = date
     }
 
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DateHourUtil {
+class DateUtil {
     
     static func hourToString(date: String) -> String {
         let index = date.index(date.startIndex, offsetBy: 16)
@@ -36,7 +36,6 @@ class Conversion {
         
         return str
     }
-
 }
 
 class AirportUtil {

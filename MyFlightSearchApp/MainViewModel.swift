@@ -18,6 +18,7 @@ class MainViewModel {
     var adultNumber = Variable<Int>(0)
     var childNumber = Variable<Int>(0)
     var babyNumber = Variable<Int>(0)
+    var date = Variable<String>("")
     
     func getCurrencySymbol() {
         let url = URL(fileURLWithPath: Bundle.main.path(forResource: "currencies", ofType: "json")!)
@@ -28,6 +29,30 @@ class MainViewModel {
         for index in currencies {
             currencyArray.append(index)
         }
+        
+    }
+    
+    func setDate(date: String) {
+        self.date.value = convertDateFormat(date: date)
+    }
+    
+    func convertDateFormat(date: String) -> String {
+        let dateEntryFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.locale = Locale(identifier: "fr-FR")
+            formatter.dateFormat = "E MMM dd, yyyy"
+            return formatter
+        }()
+        let newDate = dateEntryFormatter.date(from: date)
+        let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.locale = Locale(identifier: "fr-FR")
+            formatter.dateFormat = "yyyy-MM-dd"
+            return formatter
+        }()
+        let dateConverted = dateFormatter.string(from: newDate!)
+        
+        return dateConverted
         
     }
     

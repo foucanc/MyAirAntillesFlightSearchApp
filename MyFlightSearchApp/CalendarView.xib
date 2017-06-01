@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A2323a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarViewController" customModule="MyFlightSearchApp" customModuleProvider="target">
+            <connections>
+                <outlet property="calendarView" destination="b6S-KE-DnV" id="gRK-nD-s9h"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zK7-SN-qme"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZa-7f-Xok">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="f0a-2I-YSg"/>
+                    </constraints>
+                    <items>
+                        <navigationItem id="6pz-VX-j66">
+                            <barButtonItem key="leftBarButtonItem" title="Annuler" id="qjM-ZX-4eb">
+                                <connections>
+                                    <action selector="close:" destination="-1" id="wkT-iv-pVD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Valider" id="wAW-E0-SGc">
+                                <connections>
+                                    <action selector="validate:" destination="-1" id="gaM-M1-85s"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6S-KE-DnV" customClass="FSCalendar">
+                    <rect key="frame" x="0.0" y="64" width="375" height="583"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dZa-7f-Xok" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0ck-JN-KZP"/>
+                <constraint firstItem="b6S-KE-DnV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="B0A-kc-S1x"/>
+                <constraint firstItem="b6S-KE-DnV" firstAttribute="top" secondItem="dZa-7f-Xok" secondAttribute="bottom" id="CBU-oQ-O0W"/>
+                <constraint firstItem="dZa-7f-Xok" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ncW-P3-E7A"/>
+                <constraint firstAttribute="trailing" secondItem="dZa-7f-Xok" secondAttribute="trailing" id="o66-6h-q0Z"/>
+                <constraint firstAttribute="bottom" secondItem="b6S-KE-DnV" secondAttribute="bottom" constant="20" id="pb7-eW-6EY"/>
+                <constraint firstAttribute="trailing" secondItem="b6S-KE-DnV" secondAttribute="trailing" id="px6-uJ-KvC"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="98.5"/>
+        </view>
+    </objects>
+</document>

@@ -8,6 +8,7 @@ target 'MyFlightSearchApp' do
 	pod 'RealmSwift'
 	pod 'Bond'
 	pod 'SwiftyJSON'
+	pod 'FSCalendar'
 end
 
 post_install do |installer|

@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FSCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MyFlightSearchApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,17 +62,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B798B515E025FDA65A0753DAE665EAB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>37790CE286DB46B5E1A6B45590492078</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>470442C90D8F760D046B5C8A25575783</key>
+		<key>13331D7FC82218ADE69400113DA60482</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,17 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6AB5F070503A1708CB329A32AFBE9D0F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C65F16DDDF72C3954523D7D98E83B3F</key>
+		<key>A8EA7C708E7B8B2E1FE01252E0028AD4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C54E649D2771973BA4371A8FE537E08E</key>
+		<key>C5A2DB7A84B7B78E359870D2E1B24AA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D7314D0C6AF7BC6010DD35A4B78D3944</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +107,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F21EF1A55520ED5D5A95C0A3E23AF132</key>
+		<key>E58E8C35A8C80ADEF7B859BF7D03FE1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFA49F4D2AA8DFF9473CCA6C322B68D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -20,6 +20,7 @@ class FlightSearchViewModel {
     var adult: String = ""
     var child: String = ""
     var baby: String = ""
+    var date: String = ""
     
     func getTrips(completion: @escaping (Bool) -> Void) {
         
@@ -32,7 +33,7 @@ class FlightSearchViewModel {
                     [
                         "origin": origin,
                         "destination": destination,
-                        "date": "2017-05-21"
+                        "date": date
                     ]
                 ],
                 "passengers": [
@@ -54,7 +55,7 @@ class FlightSearchViewModel {
                 if response.data != nil {
                     let data: Data = response.data!
                     let json = JSON(data: data)
-                    print(json)
+                    //print(json)
                     let datas = TripParser.shared.parseObjects(jsonDic: json) as! [Trip]
                     let airports = AirportParser.shared.parseObjects(jsonDic: json) as! [Airport]
                     
@@ -63,7 +64,6 @@ class FlightSearchViewModel {
                     for data in companyArrayFiltered {
                         self.tripArray.append(data)
                     }
-                    //print(self.tripArray)
                     for airport in airports {
                         self.airportArray.append(airport)
                     }
@@ -102,13 +102,13 @@ class FlightSearchViewModel {
 
             let departureTimeStr = tripArray[indexPath.row].segments.first?.departureTime
             let arrivalTimeStr = tripArray[indexPath.row].segments.last?.arrivalTime
-            cell.departureHourLabel.text = DateHourUtil.hourToString(date: departureTimeStr!)
-            cell.arrivalHourLabel.text = DateHourUtil.hourToString(date: arrivalTimeStr!)
+            cell.departureHourLabel.text = DateUtil.hourToString(date: departureTimeStr!)
+            cell.arrivalHourLabel.text = DateUtil.hourToString(date: arrivalTimeStr!)
             
             cell.backgroundColor = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
             cell.tripView.backgroundColor = UIColor.white
             cell.salePriceView.backgroundColor = UIColor.white
-            cell.salePriceLabel.textColor = UIColor(red: 78/255.0, green: 205/255.0, blue: 196/255.0, alpha: 1.0)
+            cell.salePriceLabel.textColor = Color.MYAPPCOLOR
         }
         return cell
     }

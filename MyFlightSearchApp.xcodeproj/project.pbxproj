@@ -12,9 +12,15 @@
 		D900B22A1EAE400700C1A077 /* AirportSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900B2291EAE400700C1A077 /* AirportSearchViewController.swift */; };
 		D900B22C1EAE402500C1A077 /* AirportSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900B22B1EAE402500C1A077 /* AirportSearchViewModel.swift */; };
 		D900B22E1EAE403C00C1A077 /* AirportSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D900B22D1EAE403C00C1A077 /* AirportSearchView.xib */; };
+		D904E4F91ECB9C91004F791B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D904E4F81ECB9C91004F791B /* Date.swift */; };
 		D9050F7E1EAF395400D8E9AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9050F7D1EAF395400D8E9AD /* Constants.swift */; };
+		D908CD641ED768E1000358BA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D908CD631ED768E1000358BA /* Color.swift */; };
+		D90BC2691EC8CB4100113FBE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90BC2681EC8CB4100113FBE /* CalendarViewController.swift */; };
+		D90BC26B1EC8CB5C00113FBE /* CalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90BC26A1EC8CB5C00113FBE /* CalendarView.xib */; };
+		D90BC26D1EC8CB8F00113FBE /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90BC26C1EC8CB8F00113FBE /* CalendarViewModel.swift */; };
 		D90CD7281EAD0E8100AB2CF9 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CD7271EAD0E8100AB2CF9 /* Airport.swift */; };
 		D90CD72A1EAD0F4500AB2CF9 /* AirportParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CD7291EAD0F4500AB2CF9 /* AirportParser.swift */; };
+		D9108A811ED223D8004AF60A /* CustomCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9108A801ED223D8004AF60A /* CustomCalendarCell.swift */; };
 		D91306171EB770C3000372DA /* AirportSearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91306161EB770C3000372DA /* AirportSearchViewCell.swift */; };
 		D91306191EB770CE000372DA /* AirportSearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D91306181EB770CE000372DA /* AirportSearchViewCell.xib */; };
 		D913061C1EB7894A000372DA /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = D913061B1EB7894A000372DA /* airports.json */; };
@@ -65,9 +71,15 @@
 		D900B22B1EAE402500C1A077 /* AirportSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchViewModel.swift; sourceTree = "<group>"; };
 		D900B22D1EAE403C00C1A077 /* AirportSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirportSearchView.xib; sourceTree = "<group>"; };
 		D90480501EC4A35600CCADE9 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
+		D904E4F81ECB9C91004F791B /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		D9050F7D1EAF395400D8E9AD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D908CD631ED768E1000358BA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D90BC2681EC8CB4100113FBE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		D90BC26A1EC8CB5C00113FBE /* CalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarView.xib; sourceTree = "<group>"; };
+		D90BC26C1EC8CB8F00113FBE /* CalendarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		D90CD7271EAD0E8100AB2CF9 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		D90CD7291EAD0F4500AB2CF9 /* AirportParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportParser.swift; sourceTree = "<group>"; };
+		D9108A801ED223D8004AF60A /* CustomCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalendarCell.swift; sourceTree = "<group>"; };
 		D91306161EB770C3000372DA /* AirportSearchViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportSearchViewCell.swift; sourceTree = "<group>"; };
 		D91306181EB770CE000372DA /* AirportSearchViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirportSearchViewCell.xib; sourceTree = "<group>"; };
 		D913061B1EB7894A000372DA /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
@@ -136,7 +148,9 @@
 		D900B2251EADDE9F00C1A077 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D904E4F71ECB9C48004F791B /* Extensions */,
 				D900B2261EADDEB500C1A077 /* Util.swift */,
+				D908CD631ED768E1000358BA /* Color.swift */,
 				D9050F7D1EAF395400D8E9AD /* Constants.swift */,
 			);
 			name = Utils;
@@ -159,6 +173,25 @@
 				D90480501EC4A35600CCADE9 /* Billabong.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		D904E4F71ECB9C48004F791B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D904E4F81ECB9C91004F791B /* Date.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D90BC2671EC8CAF300113FBE /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D90BC2681EC8CB4100113FBE /* CalendarViewController.swift */,
+				D90BC26C1EC8CB8F00113FBE /* CalendarViewModel.swift */,
+				D9108A801ED223D8004AF60A /* CustomCalendarCell.swift */,
+				D90BC26A1EC8CB5C00113FBE /* CalendarView.xib */,
+			);
+			name = Calendar;
 			sourceTree = "<group>";
 		};
 		D91306151EB7709D000372DA /* Cell */ = {
@@ -222,6 +255,7 @@
 		D914E6C21EA6A3D9005C4541 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D90BC2671EC8CAF300113FBE /* Calendar */,
 				D900B2281EAE3FB300C1A077 /* AirportSearch */,
 				D914E6C81EA6A410005C4541 /* Main */,
 				D914E6C71EA6A406005C4541 /* FlightSearch */,
@@ -427,6 +461,7 @@
 				D91306191EB770CE000372DA /* AirportSearchViewCell.xib in Resources */,
 				D913061C1EB7894A000372DA /* airports.json in Resources */,
 				D947B46F1EBF711B00DE007A /* Plus.png in Resources */,
+				D90BC26B1EC8CB5C00113FBE /* CalendarView.xib in Resources */,
 				D914E6BB1EA6A2F2005C4541 /* LaunchScreen.storyboard in Resources */,
 				D9197BB61EBA08AA005C8878 /* Delete@3x.png in Resources */,
 				D958996C1EC5D31F00B06E36 /* Billabong.ttf in Resources */,
@@ -499,11 +534,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D904E4F91ECB9C91004F791B /* Date.swift in Sources */,
+				D90BC2691EC8CB4100113FBE /* CalendarViewController.swift in Sources */,
 				D900B22C1EAE402500C1A077 /* AirportSearchViewModel.swift in Sources */,
 				D914E6DE1EA6A784005C4541 /* FlightSearchCell.swift in Sources */,
 				D914E6D11EA6A4DB005C4541 /* Trip.swift in Sources */,
+				D908CD641ED768E1000358BA /* Color.swift in Sources */,
+				D9108A811ED223D8004AF60A /* CustomCalendarCell.swift in Sources */,
 				D914E6D51EA6A516005C4541 /* TripParser.swift in Sources */,
 				D914E6D71EA6A6CC005C4541 /* FlightSearchViewModel.swift in Sources */,
+				D90BC26D1EC8CB8F00113FBE /* CalendarViewModel.swift in Sources */,
 				D9050F7E1EAF395400D8E9AD /* Constants.swift in Sources */,
 				D914E6B11EA6A2F2005C4541 /* AppDelegate.swift in Sources */,
 				D90CD72A1EAD0F4500AB2CF9 /* AirportParser.swift in Sources */,
