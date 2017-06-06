@@ -48,6 +48,7 @@
 		D9197BB41EBA08AA005C8878 /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = D9197BB11EBA08AA005C8878 /* Delete.png */; };
 		D9197BB51EBA08AA005C8878 /* Delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9197BB21EBA08AA005C8878 /* Delete@2x.png */; };
 		D9197BB61EBA08AA005C8878 /* Delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9197BB31EBA08AA005C8878 /* Delete@3x.png */; };
+		D945EFE41EE6B1B20019C53D /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945EFE31EE6B1B20019C53D /* NetworkHelper.swift */; };
 		D947B46C1EBF711B00DE007A /* Minus.png in Resources */ = {isa = PBXBuildFile; fileRef = D947B4661EBF711B00DE007A /* Minus.png */; };
 		D947B46D1EBF711B00DE007A /* Minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D947B4671EBF711B00DE007A /* Minus@2x.png */; };
 		D947B46E1EBF711B00DE007A /* Minus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D947B4681EBF711B00DE007A /* Minus@3x.png */; };
@@ -61,6 +62,8 @@
 		D947B4881EBFDB9400DE007A /* Minus-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D947B4851EBFDB9400DE007A /* Minus-disabled@2x.png */; };
 		D947B4891EBFDB9400DE007A /* Minus-disabled@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D947B4861EBFDB9400DE007A /* Minus-disabled@3x.png */; };
 		D958996C1EC5D31F00B06E36 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D90480501EC4A35600CCADE9 /* Billabong.ttf */; };
+		D9F5EB4C1EE6C7650085ED7F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5EB4B1EE6C7650085ED7F /* Request.swift */; };
+		D9F5EB4E1EE6F2DE0085ED7F /* FlightSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5EB4D1EE6F2DE0085ED7F /* FlightSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +112,7 @@
 		D9197BB11EBA08AA005C8878 /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
 		D9197BB21EBA08AA005C8878 /* Delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete@2x.png"; sourceTree = "<group>"; };
 		D9197BB31EBA08AA005C8878 /* Delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete@3x.png"; sourceTree = "<group>"; };
+		D945EFE31EE6B1B20019C53D /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		D947B4661EBF711B00DE007A /* Minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minus.png; sourceTree = "<group>"; };
 		D947B4671EBF711B00DE007A /* Minus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus@2x.png"; sourceTree = "<group>"; };
 		D947B4681EBF711B00DE007A /* Minus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus@3x.png"; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		D947B4841EBFDB9400DE007A /* Minus-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus-disabled.png"; sourceTree = "<group>"; };
 		D947B4851EBFDB9400DE007A /* Minus-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus-disabled@2x.png"; sourceTree = "<group>"; };
 		D947B4861EBFDB9400DE007A /* Minus-disabled@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus-disabled@3x.png"; sourceTree = "<group>"; };
+		D9F5EB4B1EE6C7650085ED7F /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		D9F5EB4D1EE6F2DE0085ED7F /* FlightSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightSearch.swift; sourceTree = "<group>"; };
 		F6580ED964328D0C76C733DC /* Pods_MyFlightSearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFlightSearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -266,6 +272,7 @@
 		D914E6C31EA6A3DF005C4541 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D945EFE21EE6B18B0019C53D /* Network */,
 				D914E6C41EA6A3E7005C4541 /* Remote */,
 				D9137B9B1EC742FD004AD6D3 /* Services */,
 				D900B2251EADDE9F00C1A077 /* Utils */,
@@ -299,6 +306,7 @@
 				D914E6D01EA6A4DB005C4541 /* Trip.swift */,
 				D90CD7271EAD0E8100AB2CF9 /* Airport.swift */,
 				D9137B971EC733AB004AD6D3 /* Currency.swift */,
+				D9F5EB4D1EE6F2DE0085ED7F /* FlightSearch.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -374,6 +382,15 @@
 				D947B47A1EBFAFE400DE007A /* Plus-disabled@3x.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		D945EFE21EE6B18B0019C53D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D945EFE31EE6B1B20019C53D /* NetworkHelper.swift */,
+				D9F5EB4B1EE6C7650085ED7F /* Request.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		F127408DC0AC317D8CF9D521 /* Frameworks */ = {
@@ -535,8 +552,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D904E4F91ECB9C91004F791B /* Date.swift in Sources */,
+				D9F5EB4C1EE6C7650085ED7F /* Request.swift in Sources */,
 				D90BC2691EC8CB4100113FBE /* CalendarViewController.swift in Sources */,
 				D900B22C1EAE402500C1A077 /* AirportSearchViewModel.swift in Sources */,
+				D9F5EB4E1EE6F2DE0085ED7F /* FlightSearch.swift in Sources */,
 				D914E6DE1EA6A784005C4541 /* FlightSearchCell.swift in Sources */,
 				D914E6D11EA6A4DB005C4541 /* Trip.swift in Sources */,
 				D908CD641ED768E1000358BA /* Color.swift in Sources */,
@@ -551,6 +570,7 @@
 				D90CD7281EAD0E8100AB2CF9 /* Airport.swift in Sources */,
 				D9137B9D1EC7431A004AD6D3 /* CurrencyService.swift in Sources */,
 				D900B2271EADDEB500C1A077 /* Util.swift in Sources */,
+				D945EFE41EE6B1B20019C53D /* NetworkHelper.swift in Sources */,
 				D914E6D91EA6A6E0005C4541 /* FlightSearchViewController.swift in Sources */,
 				D914E6D31EA6A507005C4541 /* Parser.swift in Sources */,
 				D9137B9A1EC73664004AD6D3 /* CurrencyParser.swift in Sources */,

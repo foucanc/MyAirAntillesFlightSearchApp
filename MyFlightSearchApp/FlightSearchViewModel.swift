@@ -22,57 +22,37 @@ class FlightSearchViewModel {
     var baby: String = ""
     var date: String = ""
     
+    var tag: Int = 0
+    
     func getTrips(completion: @escaping (Bool) -> Void) {
         
-        let url = URL_API + API_KEY
+        let flightsearch = FlightSearch()
         
-        let parameters: Parameters = [
-            //"key": API_KEY,
-            "request": [
-                "slice": [
-                    [
-                        "origin": origin,
-                        "destination": destination,
-                        "date": date
-                    ]
-                ],
-                "passengers": [
-                    "adultCount": adult,
-                    "infantInLapCount": baby,
-                    "infantInSeatCount": 0,
-                    "childCount": child,
-                    "seniorCount": 0
-                ],
-                "solutions": 100,
-                "refundable": false
-            ]
-        ]
+        flightsearch.origin = origin
+        flightsearch.destination = destination
+        flightsearch.adult = adult
+        flightsearch.child = child
+        flightsearch.baby = baby
+        flightsearch.departureDate = date
         
-        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .responseJSON { response in
-                //print(response.data!)
-                //print(response.request)
-                if response.data != nil {
-                    let data: Data = response.data!
-                    let json = JSON(data: data)
-                    //print(json)
-                    let datas = TripParser.shared.parseObjects(jsonDic: json) as! [Trip]
-                    let airports = AirportParser.shared.parseObjects(jsonDic: json) as! [Airport]
-                    
-                    let companyArray = datas.filter(){$0.segments[0].company == Default.air_antilles.rawValue}
-                    let companyArrayFiltered = companyArray.filter(){$0.segments.last?.destination == self.destination}
-                    for data in companyArrayFiltered {
-                        self.tripArray.append(data)
-                    }
-                    for airport in airports {
-                        self.airportArray.append(airport)
-                    }
-                    completion(true)
+        NetworkHelper.shared.performRequest(requestProvider: RequestFlightSearch(flightsearch: flightsearch)) { (data) in
+            if let data = data {
+                let json = JSON(data: data)
+
+                let datas = TripParser.shared.parseObjects(jsonDic: json) as! [Trip]
+                let airports = AirportParser.shared.parseObjects(jsonDic: json) as! [Airport]
+
+                let companyArray = datas.filter(){$0.segments[0].company == Default.air_antilles.rawValue}
+                let companyArrayFiltered = companyArray.filter(){$0.segments.last?.destination == self.destination}
+                print(companyArrayFiltered)
+                for data in companyArrayFiltered {
+                    self.tripArray.append(data)
                 }
-                else {
-                    print("Failed to load: \(String(describing: response.error?.localizedDescription))")
-                    completion(false)
+                for airport in airports {
+                    self.airportArray.append(airport)
                 }
+                completion(true)
+            }
         }
     }
     

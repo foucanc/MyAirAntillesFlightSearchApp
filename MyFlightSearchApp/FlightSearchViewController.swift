@@ -73,6 +73,7 @@ class FlightSearchViewController: UIViewController {
         viewModel.child = child
         viewModel.baby = baby
         viewModel.date = date
+        
     }
 
 }
